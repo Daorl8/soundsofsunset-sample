@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>사운즈오브선셋 Sounds of Sunset | LP 카페 · 파주 운정 · 인천 영종도</title>
+<meta name="description" content="노을빛과 아날로그 사운드가 머무는 LP 카페 사운즈오브선셋. 유료 LP 청음존(ALL DAY 10,000원), 한국 식재료로 만든 수제 샌드쿠키와 스페셜티 커피. 스타필드빌리지 운정점 · 영종도점(금·토·일 새벽 2시까지)." />
+<link rel="canonical" href="https://soundsofsunset-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="Sounds of Sunset" />
+<meta property="og:title" content="Sounds of Sunset · 노을이 음악이 되는 순간" />
+<meta property="og:description" content="LP 카페 사운즈오브선셋. 파주 스타필드빌리지 운정점 · 인천 영종도점." />
+<meta property="og:url" content="https://soundsofsunset-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://soundsofsunset-sample.lgt3232.workers.dev/og-sos.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#F3F3F2" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<link rel="preload" href="ss-serif.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="ss-pretendard.woff2" as="font" type="font/woff2" crossorigin />
+<!-- 시안 도메인 = soundsofsunset-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "사운즈오브선셋 스타필드빌리지 운정점",
+      "url": "https://soundsofsunset-sample.lgt3232.workers.dev/",
+      "image": "https://soundsofsunset-sample.lgt3232.workers.dev/og-sos.jpg",
+      "telephone": "+82-507-1358-8250",
+      "address": { "@type": "PostalAddress", "streetAddress": "와석순환로515번길 10 C동 2층 3201호", "addressLocality": "파주시", "addressRegion": "경기도", "addressCountry": "KR" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "22:00" }
+      ],
+      "sameAs": ["https://www.instagram.com/soundsofsunset_/"]
+    },
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "사운즈오브선셋 영종도점",
+      "url": "https://soundsofsunset-sample.lgt3232.workers.dev/",
+      "image": "https://soundsofsunset-sample.lgt3232.workers.dev/og-sos.jpg",
+      "telephone": "+82-507-1364-8251",
+      "address": { "@type": "PostalAddress", "streetAddress": "하늘달빛로2번길 8 2층", "addressLocality": "영종구", "addressRegion": "인천광역시", "addressCountry": "KR" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "10:00", "closes": "18:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "10:00", "closes": "02:00" }
+      ],
+      "sameAs": ["https://www.instagram.com/soundsofsunset_/"]
+    }
+  ]
+}
+</script>
+<style>
+@font-face{ font-family:"SS Serif"; font-weight:400; font-display:swap; src:url("ss-serif.woff2") format("woff2"); }
+@font-face{ font-family:"SS Serif"; font-style:italic; font-weight:400; font-display:swap; src:url("ss-serif-italic.woff2") format("woff2"); }
+@font-face{ font-family:"SS Mono"; font-weight:400; font-display:swap; src:url("ss-mono.woff2") format("woff2"); }
+@font-face{ font-family:"SS Sans"; font-weight:400 700; font-display:swap; src:url("ss-pretendard.woff2") format("woff2"); }
+
+:root{
+  --paper:#F3F3F2;       /* 매장 흰 벽 · 회색 바 → 중성 */
+  --paper-2:#E9E9E7;
+  --ink:#141414;         /* 오디오 장비 검정 · 16.6:1 */
+  --soft:#5A5A58;        /* 6.2:1 */
+  --line:#D6D6D3;
+  --sun:#E05625;         /* 로고 노을 실측(224,86,37) · 그래픽 전용 */
+  --sun-btn:#C2461B;     /* 채움 버튼 (흰 글자 5.0:1) */
+  --sun-t:#A93E18;       /* 작은 주황 글자 5.6:1 */
+  --night:#111A2E;       /* 영종도 심야 띠 · 운정 조명 사진의 밤 하늘 */
+  --serif:"SS Serif","SS Sans",Georgia,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"SS Mono","SS Sans",ui-monospace,Menlo,Consolas,"Apple SD Gothic Neo","Malgun Gothic",monospace;
+  --sans:"SS Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --wrap:1160px;
+  --r:2px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word; }
+img,svg{ max-width:100%; display:block; }
+img{ height:auto; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,p{ margin:0; }
+:focus-visible{ outline:2px solid var(--sun-t); outline-offset:3px; }
+.wrap{ width:min(100% - 40px, var(--wrap)); margin:0 auto; }
+.sec{ padding:96px 0; }
+@media (min-width:900px){ .sec{ padding:136px 0; } }
+.alt{ background:var(--paper-2); }
+
+/* 라벨: 모노 (LP 라벨 · 트랙 번호 느낌) */
+.label{ font-family:var(--mono); font-size:.78rem; line-height:1.4; letter-spacing:.12em; text-transform:uppercase; color:var(--sun-t); }
+.h2{ margin-top:14px; font-family:var(--serif); font-weight:400; font-size:clamp(2.6rem,6vw,4.2rem); line-height:1.02; letter-spacing:-.01em; }
+.h2 em{ font-style:italic; }
+.ko{ margin-top:12px; font-size:1rem; font-weight:600; }
+.desc{ margin-top:16px; max-width:32em; color:var(--soft); font-size:1.02rem; }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 22px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.95rem; font-weight:700; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.btn.fill{ background:var(--sun-btn); border-color:var(--sun-btn); color:#fff; }
+.btn.dark{ background:var(--ink); color:var(--paper); }
+.btn:active{ transform:scale(.98); }
+@media (hover:hover){ .btn:not(.fill):not(.dark):hover{ background:var(--ink); color:var(--paper); } .btn.fill:hover{ background:#A93E18; border-color:#A93E18; } .btn.dark:hover{ background:#333; border-color:#333; } }
+
+/* 헤더 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(243,243,242,.96); border-bottom:1px solid var(--line); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; }
+.brand img{ width:176px; }
+.nav{ display:none; gap:28px; font-family:var(--mono); font-size:.8rem; letter-spacing:.06em; }
+@media (min-width:900px){ .nav{ display:flex; } }
+@media (hover:hover){ .nav a:hover{ color:var(--sun-t); } }
+.head-cta{ min-height:40px; padding:0 16px; font-size:.86rem; }
+@media (max-width:899px){ .head-cta{ display:none; } }
+
+/* 히어로: 노을 원 (로고의 줄무늬 o에서) */
+.hero .wrap{ display:grid; gap:40px; padding:48px 0 80px; align-items:center; }
+@media (min-width:900px){ .hero .wrap{ grid-template-columns:minmax(0,6fr) minmax(0,5fr); gap:64px; padding:72px 0 120px; } }
+.hero h1{ margin-top:18px; font-family:var(--serif); font-weight:400; font-size:clamp(3.2rem,8.4vw,6.4rem); line-height:.98; letter-spacing:-.015em; }
+.hero h1 em{ font-style:italic; }
+.hero .ko{ margin-top:18px; font-size:1.12rem; }
+.hero .lead{ margin-top:14px; max-width:30em; color:var(--soft); font-size:1.03rem; }
+.hero .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+.sun{ width:min(100%,460px); margin:0 auto; }
+@media (max-width:899px){ .sun{ width:min(58%,250px); order:-1; } }
+.sides{ display:flex; gap:22px; margin-top:26px; font-family:var(--mono); font-size:.8rem; color:var(--soft); }
+.sides b{ color:var(--ink); font-weight:400; }
+
+/* 트랙리스트 */
+.tracks{ margin-top:44px; border-top:1.5px solid var(--ink); }
+.track{ display:grid; grid-template-columns:44px minmax(0,1fr); gap:6px 16px; padding:22px 0; border-bottom:1px solid var(--line); }
+.track .n{ font-family:var(--mono); font-size:.9rem; color:var(--sun-t); padding-top:6px; }
+.track h3{ font-family:var(--serif); font-weight:400; font-size:1.7rem; line-height:1.15; }
+.track h3 span{ display:block; margin-top:4px; font-family:var(--sans); font-size:.9rem; font-weight:600; }
+.track p{ grid-column:2; color:var(--soft); font-size:.97rem; }
+.track .t{ grid-column:2; font-family:var(--mono); font-size:.84rem; }
+@media (min-width:900px){
+  .track{ grid-template-columns:64px minmax(0,4fr) minmax(0,5fr) minmax(0,2fr); align-items:baseline; gap:24px; padding:26px 0; }
+  .track p{ grid-column:auto; }
+  .track .t{ grid-column:auto; text-align:right; }
+}
+.shelf{ margin-top:48px; }
+.shelf img{ width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:var(--r); }
+.shelf figcaption, .fig-cap{ margin-top:10px; font-family:var(--mono); font-size:.78rem; color:var(--soft); }
+
+/* 청음존 · 라이너 노트 */
+.listen .wrap{ display:grid; gap:44px; align-items:center; }
+@media (min-width:900px){ .listen .wrap{ grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:72px; } }
+.steps{ margin:30px 0 0; padding:0; list-style:none; counter-reset:s; }
+.steps li{ position:relative; padding:16px 0 16px 46px; border-top:1px solid var(--line); }
+.steps li:last-child{ border-bottom:1px solid var(--line); }
+.steps li::before{ counter-increment:s; content:"0" counter(s); position:absolute; left:0; top:17px; font-family:var(--mono); font-size:.86rem; color:var(--sun-t); }
+.steps b{ font-weight:700; }
+.steps small{ display:block; margin-top:2px; color:var(--soft); font-size:.92rem; }
+.price{ display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; margin-top:26px; padding:18px 20px; background:var(--ink); color:var(--paper); border-radius:var(--r); }
+.price .k{ font-family:var(--mono); font-size:.8rem; letter-spacing:.08em; color:#B9B9B6; }
+.price .v{ font-family:var(--serif); font-size:1.9rem; line-height:1; }
+.price small{ flex-basis:100%; font-size:.88rem; color:#B9B9B6; }
+.listen .note{ margin-top:16px; font-size:.94rem; color:var(--soft); }
+.listen-photos{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:end; }
+@media (min-width:900px){ .listen-photos{ gap:20px; } }
+.listen-photos figure{ margin:0; }
+.listen-photos img{ width:100%; object-fit:cover; border-radius:var(--r); }
+.listen-photos .a img{ aspect-ratio:4/5; }
+.listen-photos .b img{ aspect-ratio:1; }
+
+/* 지점: Side A / Side B */
+.side .wrap{ display:grid; gap:44px; }
+@media (min-width:900px){ .side .wrap{ grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:72px; align-items:start; } .side.b .wrap > .media{ order:-1; } }
+.side-tag{ display:inline-flex; align-items:center; gap:10px; }
+.side-tag i{ width:28px; height:28px; border-radius:50%; background:var(--ink); position:relative; }
+.side-tag i::after{ content:""; position:absolute; inset:10px; border-radius:50%; background:var(--sun); }
+.info{ margin:28px 0 0; }
+.info div{ display:grid; grid-template-columns:76px minmax(0,1fr); gap:12px; padding:14px 0; border-top:1px solid var(--line); }
+.info div:last-child{ border-bottom:1px solid var(--line); }
+.info dt{ font-weight:700; }
+.info dd{ margin:0; color:var(--soft); }
+.info dd b{ color:var(--ink); font-weight:600; }
+.info dd small{ display:block; margin-top:3px; font-size:.88rem; }
+.side .cta{ margin-top:24px; display:flex; flex-wrap:wrap; gap:10px; }
+.media{ display:grid; gap:14px; }
+.media img{ width:100%; object-fit:cover; border-radius:var(--r); aspect-ratio:4/5; }
+.map{ width:100%; aspect-ratio:4/3; border:0; border-radius:var(--r); background:var(--paper-2); }
+@media (min-width:900px){ .media{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; align-items:stretch; } .media .map{ aspect-ratio:auto; height:100%; min-height:300px; } }
+
+/* 영종도 심야 띠 */
+.midnight{ margin-top:28px; padding:22px 22px 20px; background:var(--night); color:#F6ECE0; border-radius:var(--r); }
+.midnight .k{ font-family:var(--mono); font-size:.78rem; letter-spacing:.12em; color:#E9913A; }
+.midnight p.big{ margin-top:6px; font-family:var(--serif); font-size:1.9rem; line-height:1.1; }
+.midnight p.s{ margin-top:6px; font-size:.92rem; color:#D7D0C6; }
+
+/* 알아두기 */
+.good{ display:grid; gap:0; margin-top:36px; border-top:1.5px solid var(--ink); }
+@media (min-width:900px){ .good{ grid-template-columns:repeat(3,minmax(0,1fr)); } .good div + div{ border-left:1px solid var(--line); padding-left:24px; } }
+.good div{ padding:20px 0; border-bottom:1px solid var(--line); }
+@media (min-width:900px){ .good div{ padding:24px 24px 24px 0; } }
+.good b{ display:block; font-weight:700; }
+.good p{ margin-top:4px; color:var(--soft); font-size:.95rem; }
+
+/* 푸터 */
+.foot{ background:var(--ink); color:var(--paper); text-align:center; padding:0 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
+@media (min-width:900px){ .foot{ padding-bottom:72px; } }
+.foot .glow{ height:10px; background:linear-gradient(90deg,#E9913A,#E05625 45%,#93311A 75%,#141414); }
+.foot img{ width:240px; margin:60px auto 16px; }
+.foot .line{ font-family:var(--serif); font-style:italic; font-size:1.5rem; color:#E9913A; }
+.foot .muted{ margin-top:14px; color:#B9B9B6; }
+.foot .muted + .muted{ margin-top:6px; }
+.foot a{ text-decoration:underline; text-underline-offset:3px; }
+
+/* 모바일 하단 바 (불투명) */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--paper); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1.5px solid var(--ink); border-radius:var(--r); font-size:.88rem; font-weight:700; background:var(--paper); }
+.quick a.fill{ background:var(--sun-btn); border-color:var(--sun-btn); color:#fff; }
+.quick a.dark{ background:var(--ink); color:var(--paper); }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 리빌: 사진 로드 후 페이드 (setInterval) */
+.js .reveal{ opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease; }
+.js .reveal.in{ opacity:1; transform:none; }
+@media print{ .js .reveal{ opacity:1; transform:none; } }
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; }</style></noscript>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sounds of Sunset 처음으로"><img src="ss-logo-ink.webp" alt="Sounds of Sunset" width="808" height="82" /></a>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#tracks">Tracklist</a><a href="#listen">Listening</a><a href="#side-a">Side A 운정</a><a href="#side-b">Side B 영종도</a></nav>
+    <a class="btn dark head-cta" href="https://www.instagram.com/soundsofsunset_/" target="_blank" rel="noopener">인스타그램</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">LP Café · Paju Unjeong &amp; Yeongjong</p>
+        <h1>When the sunset<br /><em>becomes music.</em></h1>
+        <p class="ko">노을이 음악이 되는 순간</p>
+        <p class="lead">일상의 소음 너머, 노을빛과 아날로그 사운드가 머무는 뮤직 라운지. 파주 스타필드빌리지와 인천 영종도, 두 곳의 2층에서 만나요.</p>
+        <div class="cta">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2023013289" target="_blank" rel="noopener">운정점 길찾기</a>
+          <a class="btn" href="https://map.naver.com/p/entry/place/2070009392" target="_blank" rel="noopener">영종도점 길찾기</a>
+        </div>
+        <p class="sides"><span><b>Side A</b> 운정점</span><span><b>Side B</b> 영종도점</span></p>
+      </div>
+      <svg class="sun reveal" viewBox="0 0 400 400" role="img" aria-label="줄무늬가 들어간 노을 원 그래픽">
+        <defs>
+          <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F0A04A" /><stop offset=".42" stop-color="#E05625" /><stop offset=".72" stop-color="#93311A" /><stop offset="1" stop-color="#2A0F06" />
+          </linearGradient>
+          <mask id="cut">
+            <rect width="400" height="400" fill="#fff" />
+            <rect y="226" width="400" height="4" fill="#000" /><rect y="250" width="400" height="6" fill="#000" />
+            <rect y="276" width="400" height="8" fill="#000" /><rect y="304" width="400" height="10" fill="#000" />
+            <rect y="334" width="400" height="12" fill="#000" /><rect y="366" width="400" height="14" fill="#000" />
+          </mask>
+        </defs>
+        <circle cx="200" cy="200" r="200" fill="url(#dusk)" mask="url(#cut)" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="sec alt" id="tracks" aria-labelledby="tracks-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">Tracklist</p>
+        <h2 id="tracks-h" class="h2">Five things <em>to play</em></h2>
+        <p class="ko">사운즈오브선셋에서 즐기는 다섯 가지</p>
+      </div>
+      <div class="tracks">
+        <div class="track reveal"><span class="n">01</span><h3>LP Listening Zone<span>유료 LP 청음존</span></h3><p>직접 바이닐을 고르고 턴테이블에 바늘을 올리는 시간. 고음질 사운드로 오직 나만의 음악에 집중해요.</p><span class="t">ALL DAY 10,000원</span></div>
+        <div class="track reveal"><span class="n">02</span><h3>Golden Hour<span>골든아워</span></h3><p>통창으로 노을빛이 깊게 들어오는 시간. 창가 자리에서 역광 실루엣 사진을 남기기 좋아요.</p><span class="t">4–6 PM</span></div>
+        <div class="track reveal"><span class="n">03</span><h3>Sand Cookie<span>수제 샌드쿠키</span></h3><p>한국 전통 식재료의 깊은 맛을 현대적인 디저트로 풀어낸 시그니처.</p><span class="t">Signature</span></div>
+        <div class="track reveal"><span class="n">04</span><h3>Coffee &amp; Tea<span>스페셜티 커피 · 티</span></h3><p>스페셜티 커피와 다채로운 티 라인업이 음악의 여운을 깊게 만들어 줘요.</p><span class="t">Specialty</span></div>
+        <div class="track reveal"><span class="n">05</span><h3>Tableware<span>레코드 테이블웨어</span></h3><p>레코드판과 음악을 모티브로 직접 디자인한 테이블웨어. 위에서 내려다보는 플랫레이 컷이 시그니처예요.</p><span class="t">Flat-lay</span></div>
+      </div>
+      <figure class="shelf reveal"><img src="ss-shelf.webp" alt="조명이 켜진 선반에 앞면이 보이게 진열된 LP 앨범들" width="1400" height="1050" loading="lazy" /><figcaption>시대와 장르를 아우르는 큐레이션 LP</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec listen" id="listen" aria-labelledby="listen-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">Liner notes · How to listen</p>
+        <h2 id="listen-h" class="h2">Drop <em>the needle.</em></h2>
+        <p class="ko">턴테이블이 처음이어도 괜찮아요</p>
+        <ol class="steps">
+          <li><b>카운터에서 함께 결제</b><small>음료와 청음존 이용권을 함께 결제하면 전용 좌석으로 안내해 드려요.</small></li>
+          <li><b>바늘 올리는 법은 직원이 안내</b><small>음반 교체 방법까지 알려 드리고, 좌석마다 이용 가이드가 있어요.</small></li>
+          <li><b>마음에 드는 LP를 골라 듣기</b><small>매장 큐레이션 LP가 충분해서 빈손으로 오셔도 돼요.</small></li>
+        </ol>
+        <div class="price"><span class="k">LP LISTENING · ALL DAY</span><span class="v">10,000원</span><small>주말 · 공휴일은 2시간 이용 제한</small></div>
+        <p class="note">청음존을 이용하지 않아도 카페는 자유롭게 이용할 수 있어요.</p>
+      </div>
+      <div class="listen-photos">
+        <figure class="a reveal"><img src="ss-window.webp" alt="통창을 따라 놓인 청음석의 턴테이블과 헤드폰" width="1000" height="986" loading="lazy" /></figure>
+        <figure class="b reveal"><img src="ss-turntable.webp" alt="주황 벽 앞 오디오 믹서 위의 턴테이블" width="1000" height="648" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt side a" id="side-a" aria-labelledby="side-a-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label side-tag"><i aria-hidden="true"></i>Side A</p>
+        <h2 id="side-a-h" class="h2">Unjeong</h2>
+        <p class="ko">스타필드빌리지 운정점</p>
+        <p class="desc">쇼핑 중 한 계단 올라선 2층. 낮에는 산책로를 내려다보고, 해 질 녘에는 통창으로 노을빛이 스며들어요.</p>
+        <dl class="info">
+          <div><dt>주소</dt><dd><b>경기 파주시 와석순환로515번길 10 C동 2층 3201호</b><small>스타필드빌리지 운정점 C동 2층 · 애슐리 맞은편, 운정빌리지약국 옆</small></dd></div>
+          <div><dt>교통</dt><dd>경의중앙선 운정역 1번 출구에서 약 500m</dd></div>
+          <div><dt>주차</dt><dd>스타필드빌리지 C동에 주차 후 2층으로<small>주차 4시간 무료</small></dd></div>
+          <div><dt>영업</dt><dd><b>매일 10:00 – 22:00</b><small>라스트오더 21:30</small></dd></div>
+          <div><dt>전화</dt><dd><a href="tel:050713588250"><b>0507-1358-8250</b></a></dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2023013289" target="_blank" rel="noopener">네이버 길찾기</a>
+          <a class="btn" href="tel:050713588250">전화하기</a>
+        </div>
+      </div>
+      <div class="media reveal">
+        <img src="ss-lamp.webp" alt="밤 창가에 걸린 주황 펜던트 조명" width="640" height="799" loading="lazy" />
+        <iframe class="map" title="운정점 위치 지도" src="https://www.google.com/maps?q=37.7260779,126.7649002&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec side b" id="side-b" aria-labelledby="side-b-h">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label side-tag"><i aria-hidden="true"></i>Side B</p>
+        <h2 id="side-b-h" class="h2">Yeongjong</h2>
+        <p class="ko">영종도점</p>
+        <p class="desc">2층의 탁 트인 창으로 영종도의 하늘을 마주하는 곳. 해 질 녘이면 공간 전체가 붉고 따뜻하게 물들어요.</p>
+        <dl class="info">
+          <div><dt>주소</dt><dd><b>인천 영종구 하늘달빛로2번길 8 2층</b><small>엘리베이터 또는 계단으로 2층</small></dd></div>
+          <div><dt>교통</dt><dd>구읍뱃터에서 자차 5분<small>을왕리 · 왕산해수욕장에서 자차 15분</small></dd></div>
+          <div><dt>주차</dt><dd><b>씨사이드파크 어린이물놀이장 주차장</b> (무료)<small>주차장이 여러 곳이라 꼭 어린이물놀이장 주차장으로 오세요. 공원 안으로 들어오면 바로 보여요.</small></dd></div>
+          <div><dt>영업</dt><dd><b>월 – 목 10:00 – 18:30</b> · 라스트오더 18:00<small>금 – 일 10:00 – 다음 날 02:00 · 라스트오더 01:30</small></dd></div>
+          <div><dt>반려동물</dt><dd>외부 테라스에서 함께할 수 있어요<small>실내 이용은 어려워요</small></dd></div>
+          <div><dt>전화</dt><dd><a href="tel:050713648251"><b>0507-1364-8251</b></a></dd></div>
+        </dl>
+        <div class="midnight">
+          <p class="k">MIDNIGHT · FRI – SUN</p>
+          <p class="big">21:00 – 02:00</p>
+          <p class="s">금 · 토 · 일은 새벽 2시까지, 밤에도 LP를 들을 수 있어요. 라스트오더 01:30.</p>
+        </div>
+        <div class="cta">
+          <a class="btn fill" href="https://map.naver.com/p/entry/place/2070009392" target="_blank" rel="noopener">네이버 길찾기</a>
+          <a class="btn" href="tel:050713648251">전화하기</a>
+        </div>
+      </div>
+      <div class="media reveal">
+        <img src="ss-display.webp" alt="하늘이 보이는 창가에 진열된 LP와 턴테이블" width="1000" height="1333" loading="lazy" />
+        <iframe class="map" title="영종도점 위치 지도" src="https://www.google.com/maps?q=37.4820562,126.5671203&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="good" aria-labelledby="good-h">
+    <div class="wrap reveal">
+      <p class="label">Good to know</p>
+      <h2 id="good-h" class="h2">Bonus <em>track</em></h2>
+      <div class="good">
+        <div><b>누구나, 넉넉하게</b><p>개인부터 커플, 가족, 단체까지 모두 머물 수 있는 대형 카페예요.</p></div>
+        <div><b>케어키즈존 운영</b><p>두 지점 모두 케어키즈존으로 운영해요.</p></div>
+        <div><b>대관 · 협업 문의</b><p>광고, 대관, 콜라보 문의는 인스타그램 DM으로 남겨 주세요.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <img src="ss-logo-cream.webp" alt="" width="808" height="82" loading="lazy" />
+    <p class="line">Café &amp; LP Bar</p>
+    <p class="muted">운정점 · 경기 파주시 와석순환로515번길 10 C동 2층 · <a href="tel:050713588250">0507-1358-8250</a></p>
+    <p class="muted">영종도점 · 인천 영종구 하늘달빛로2번길 8 2층 · <a href="tel:050713648251">0507-1364-8251</a></p>
+    <p class="muted"><a href="https://www.instagram.com/soundsofsunset_/" target="_blank" rel="noopener">@soundsofsunset_</a> · © Sounds of Sunset</p>
+  </div>
+</footer>
+
+<div class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://map.naver.com/p/entry/place/2023013289" target="_blank" rel="noopener">운정 길찾기</a>
+  <a class="dark" href="https://map.naver.com/p/entry/place/2070009392" target="_blank" rel="noopener">영종 길찾기</a>
+  <a href="https://www.instagram.com/soundsofsunset_/" target="_blank" rel="noopener">인스타</a>
+</div>
+
+<script>
+(function(){
+  /* 리빌: 사진 로드 후 페이드 + 폰트 준비 후 시작 */
+  function show(el){
+    if(el._wait) return;
+    var imgs=el.tagName==='IMG'?[el]:[].slice.call(el.querySelectorAll('img'));
+    var left=imgs.filter(function(i){ return !i.complete; });
+    if(!left.length){ el.classList.add('in'); return; }
+    el._wait=true; var n=left.length;
+    var fin=function(){ if(--n<=0) el.classList.add('in'); };
+    left.forEach(function(i){
+      if(i.loading==='lazy') i.loading='eager';
+      i.addEventListener('load',fin,{once:true}); i.addEventListener('error',fin,{once:true});
+    });
+    setTimeout(function(){ el.classList.add('in'); },2500);
+  }
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  function tick(){
+    if(!pending.length){ clearInterval(t); return; }
+    if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
+      pending.forEach(show); pending=[]; return;
+    }
+    var line=window.innerHeight*0.92;
+    pending=pending.filter(function(el){
+      if(el.getBoundingClientRect().top < line){ show(el); return false; }
+      return true;
+    });
+  }
+  var t, started=false;
+  function start(){ if(started) return; started=true; tick(); t=setInterval(tick,120); }
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(start); }
+  setTimeout(start,1200);
+  /* 앵커 스크롤 */
+  var head=document.querySelector('.site-head');
+  [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id);
+      if(!el) return; e.preventDefault();
+      var s0=window.pageYOffset, end=id==='#top'?0:el.getBoundingClientRect().top+s0-head.offsetHeight+1;
+      var t0=Date.now(), dur=560;
+      var iv=setInterval(function(){
+        var p=Math.min((Date.now()-t0)/dur,1), e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+        window.scrollTo(0,s0+(end-s0)*e2);
+        if(p>=1) clearInterval(iv);
+      },16);
+    });
+  });
+})();
+</script>
+</body>
+</html>
