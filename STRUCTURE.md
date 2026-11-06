@@ -15,6 +15,7 @@ soundsofsunset-sample/
 ├─ ss-display.webp            Side B 영종도
 ├─ favicon.png · og-sos.jpg
 ├─ img/                       다올 제공 원본 19장 (배포 제외)
+├─ _old/index_v0.1.1.html     푸터 그라데이션 전 롤백용 (배포 제외)
 └─ CHANGELOG.md / STRUCTURE.md
 ```
 
@@ -22,7 +23,7 @@ soundsofsunset-sample/
 헤더 → 히어로 → `#tracks`(띠색) → `#listen` → `#side-a`(띠색) → `#side-b`(+ `.midnight`) → `#good`(띠색) → 푸터(먹) + 모바일 `.quick`.
 
 ## 색 규칙
-중성 바탕 · 먹. 노을 #E05625와 그라데이션은 그래픽(노을 원 · 파비콘 · 푸터 띠)만. 버튼 #C2461B, 작은 주황 글자 #A93E18. 남색 #111A2E는 영종도 심야 띠만.
+중성 바탕 · 먹. 노을 #E05625와 그라데이션은 그래픽(노을 원 · 파비콘 · og)과 푸터 면(v0.2)만. 푸터 글자는 어두운 아래쪽에만. 버튼 #C2461B, 작은 주황 글자 #A93E18. 남색 #111A2E는 영종도 심야 띠만.
 
 ## 링크
 - 운정점: 네이버 `map.naver.com/p/entry/place/2023013289` · 전화 `0507-1358-8250`

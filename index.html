@@ -196,12 +196,13 @@ h1,h2,h3,p{ margin:0; }
 .good p{ margin-top:4px; color:var(--soft); font-size:.95rem; }
 
 /* 푸터 */
-.foot{ background:var(--ink); color:var(--paper); text-align:center; padding:0 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
+/* v0.2: 푸터 = 로고 타일과 같은 노을 그라데이션 면 (주황 → 먹). 글자는 어두운 아래쪽에만 */
+.foot{ background:linear-gradient(180deg,#F0A04A 0,#E05625 150px,#93311A 260px,#2A0F06 380px,#141414 460px); color:#F6ECE0; text-align:center; padding:0 0 calc(110px + env(safe-area-inset-bottom)); font-size:.88rem; }
 @media (min-width:900px){ .foot{ padding-bottom:72px; } }
-.foot .glow{ height:10px; background:linear-gradient(90deg,#E9913A,#E05625 45%,#93311A 75%,#141414); }
-.foot img{ width:240px; margin:60px auto 16px; }
-.foot .line{ font-family:var(--serif); font-style:italic; font-size:1.5rem; color:#E9913A; }
-.foot .muted{ margin-top:14px; color:#B9B9B6; }
+.foot img{ width:min(78%,360px); margin:0 auto; padding-top:110px; box-sizing:content-box; }
+.foot .line{ margin-top:44px; font-family:var(--serif); font-style:italic; font-size:1.6rem; line-height:1.2; color:#F6ECE0; }
+.foot .f-info{ margin-top:110px; }
+.foot .muted{ color:#D7D0C6; }
 .foot .muted + .muted{ margin-top:6px; }
 .foot a{ text-decoration:underline; text-underline-offset:3px; }
 
@@ -371,13 +372,14 @@ h1,h2,h3,p{ margin:0; }
 </main>
 
 <footer class="foot">
-  <div class="glow" aria-hidden="true"></div>
   <div class="wrap">
     <img src="ss-logo-cream.webp" alt="" width="808" height="82" loading="lazy" />
     <p class="line">Café &amp; LP Bar</p>
+    <div class="f-info">
     <p class="muted">운정점 · 경기 파주시 와석순환로515번길 10 C동 2층 · <a href="tel:050713588250">0507-1358-8250</a></p>
     <p class="muted">영종도점 · 인천 영종구 하늘달빛로2번길 8 2층 · <a href="tel:050713648251">0507-1364-8251</a></p>
     <p class="muted"><a href="https://www.instagram.com/soundsofsunset_/" target="_blank" rel="noopener">@soundsofsunset_</a> · © Sounds of Sunset</p>
+    </div>
   </div>
 </footer>
 
